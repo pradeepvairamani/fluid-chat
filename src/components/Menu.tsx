@@ -22,9 +22,8 @@ export const Menu: React.FunctionComponent<IMenuProps> = (
         onClick={() => setOpen(false)}
       ></div>
       <div
-        className={`menu ${props.hPosition} ${props.vPosition} ${
-          open ? "open" : "closed"
-        }`}
+        className={`menu ${props.hPosition} ${props.vPosition} ${open ? "open" : "closed"
+          }`}
       >
         {props.content}
       </div>
@@ -40,6 +39,7 @@ export const Menu: React.FunctionComponent<IMenuProps> = (
         &nbsp;&nbsp;{props.name}&nbsp;&nbsp;
         <FontAwesomeIcon icon={["fas", open ? "caret-down" : "caret-up"]} />
       </button>
+      
     </div>
   );
 };

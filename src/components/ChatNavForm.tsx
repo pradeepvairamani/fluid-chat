@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Slider } from "@mui/material";
 import React from "react";
 
 export interface IChatNavFormProps {
@@ -52,10 +53,6 @@ export const ChatNavForm: React.FunctionComponent<IChatNavFormProps> = (
           title="go to document"
         />
         &nbsp;&nbsp;Go
-      </button>
-      <button type="button" onClick={handleCreateNew}>
-        <FontAwesomeIcon icon={["fas", "plus"]} title="create new document" />
-        &nbsp;&nbsp;Create New
       </button>
     </form>
   );

@@ -26,31 +26,11 @@ export const UserForm: React.FunctionComponent<IUserFormProps> = (
   if (!props.user || props.user.temp) {
     return (
       <form onSubmit={handleLogin}>
-        <div className="hover-label">
-          <input
-            type="text"
-            id="username-input"
-            name="username"
-            placeholder=""
-          />
-          <label htmlFor="username-input">Username</label>
-        </div>
-        <button type="submit">
-          Log in&nbsp;&nbsp;
-          <FontAwesomeIcon icon={["fas", "right-to-bracket"]} />
-        </button>
       </form>
     );
   }
   return (
     <form onSubmit={handleLogout}>
-      <div className="username">
-        <FontAwesomeIcon icon={["fas", "user"]} /> {props.user.id}
-      </div>
-      <button type="submit">
-        Log out&nbsp;&nbsp;
-        <FontAwesomeIcon icon={["fas", "right-from-bracket"]} />
-      </button>
     </form>
   );
 };

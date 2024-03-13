@@ -15,11 +15,13 @@ import { OpenAIClientProvider } from "../utils/openAiClientProvider";
 export interface IGenTrafficButtonProps {
   currentUser: IUser;
   container: IFluidContainer;
+  sliderValue: number;
 }
 
 export const GenTrafficButton: React.FunctionComponent<
   IGenTrafficButtonProps
 > = (props) => {
+  console.log("Slider value: ", props.sliderValue);
   const [working, setWorking] = React.useState<boolean>(false);
 
   React.useEffect(() => {
