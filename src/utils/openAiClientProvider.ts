@@ -5,7 +5,6 @@ export class OpenAIClientProvider {
 	private readonly sessionMap: Map<string, ChatCompletionMessageParam[]>;
 	private openai: OpenAI;
 	private readonly openaiModel: string = "gpt-3.5-turbo-0301";
-
 	private readonly openaiApiKey = "<Update openai api>";
 
 	constructor() {
