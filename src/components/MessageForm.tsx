@@ -34,13 +34,7 @@ export const MessageForm: React.FunctionComponent<IMessageFormProps> = (
       props.container.connect();
     }
 
-    if (inputTrimmed.length > 0) {
-      if (inputTrimmed.length < 140) {
-        createAndSetPlainMessage(props.container, props.user, inputTrimmed);
-      } else {
-        createAndSetPointerMessage(props.container, props.user, inputTrimmed);
-      }
-    }
+    createAndSetPlainMessage(props.container, props.user, inputTrimmed);
 
     setInput("");
   };

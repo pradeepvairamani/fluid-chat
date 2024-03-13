@@ -39,28 +39,6 @@ export function App() {
 
   return (
     <div className={`App`}>
-      <section className="side-nav">
-        <nav className="toolbar">
-          <div className="toolbar-row">
-            <h1>
-              <FluidLogo /> Fluid Chat
-            </h1>
-            <Menu
-              name="Help"
-              icon={["fas", "question-circle"]}
-              content={<Help />}
-              hPosition="from-left"
-              vPosition="from-bottom"
-            />
-          </div>
-          <div className="toolbar-column">
-            <div className="toolbar-row">
-              <ThemeToggle />
-              <ConnectionTimer container={document?.container} />
-            </div>
-          </div>
-        </nav>
-      </section>
       <main className="main-app">
         <nav className="toolbar">
           <ChatNavForm

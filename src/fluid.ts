@@ -52,13 +52,6 @@ export const getFluidData = async (documentId: string | undefined): Promise<IFlu
         ({ container } = await client.createContainer(containerSchema));
         const map: SharedMap = (container.initialObjects.map as SharedMap);
         map.set(messagesKey, []);
-        if (window.location.search.includes(initialPayloadKey)) {
-            const hiddenData: SharedMap = (container.initialObjects.hiddenData as SharedMap);
-            hiddenData.set(initialPayloadKey, `${randomString().repeat(Kilobyte * Kilobyte)}`); // 10Mb initial payload size
-        }
-        createAndSetPointerMessage(container, { id: "test-user", temp: true, permissions: ["read", "write"] }, "test message")
-        createAndSetPointerMessage(container, { id: "test-user", temp: true, permissions: ["read", "write"] }, "test message")
-        createAndSetPointerMessage(container, { id: "test-user", temp: true, permissions: ["read", "write"] }, "test message")
         id = await container.attach();
     } else {
         ({ container } = await client.getContainer(id, containerSchema));
