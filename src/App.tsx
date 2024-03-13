@@ -54,10 +54,10 @@ export function App() {
           {/* <div>Happiness slider</div> */}
           <Slider
             aria-label="Happiness"
-            defaultValue={100}
+            defaultValue={10}
             value={sliderValue}
             onChange={handleSliderChange}
-            getAriaValueText={(valuetext: number, index: number): string => valuetext.toString()}
+            getAriaValueText={(valuetext: number, index: number): string => {return valuetext.toString()}}
             valueLabelDisplay="auto"
             shiftStep={30}
             step={2}

@@ -6,7 +6,6 @@ import { createAndSetPlainMessage, createAndSetPointerMessage } from "../fluid";
 import { canWrite } from "../utils";
 import { GenChatButton } from "./GenChatButton";
 import { GenTrafficButton } from "./GenTrafficButton";
-import { Slider } from "@mui/material";
 
 export interface IMessageFormProps {
   container: IFluidContainer | undefined;
