@@ -51,7 +51,7 @@ export function App() {
             currentDocId={document?.id}
             onSubmit={navigateToDocument}
           />
-          <div>Happiness slider</div>
+          {/* <div>Happiness slider</div> */}
           <Slider
             aria-label="Happiness"
             defaultValue={100}
